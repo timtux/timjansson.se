@@ -2,7 +2,7 @@
 layout: post
 title:  "Swish API, klientcertifikat & Amazon Linux (EBS) (NSS)"
 date:   2016-03-21 15:12:42 +0100
-categories: amazon swish
+categories: swish
 ---
 På jobbet håller vi på att migrera till Amazons infrastruktur från de virtualiserade VMWare-instanserna med Debian vi kör idag. På Amazon har vi valt en uppsättning med Amazon Linux (PHP) som körs i "Elastic Beanstalk". Målet med migreringen är att få bort så mycket manuellt underhåll som möjligt, öka driftsäkerheten och få en miljö som skalar av sig själv.
 
