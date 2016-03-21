@@ -13,8 +13,8 @@ description: >
   min vardag. Många poster kommer vara slarvigt skrivna men alla gånger jag försökt
   mig på detta tidigare har det slutat i att jag strävat efter så mycket perfektion
   att jag inte fått något publicerat.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://timjansson.se" # the base hostname & protocol for your site
+baseurl: "/timjansson.se" # the subpath of your site, e.g. /blog
+url: "http://timtux.github.io/" # the base hostname & protocol for your site
 twitter_username: timtux
 github_username:  timtux
 
