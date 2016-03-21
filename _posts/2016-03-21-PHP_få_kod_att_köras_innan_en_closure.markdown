@@ -2,7 +2,6 @@
 layout: post
 title:  "PHP: Få kod att exekveras innan en closure"
 date:   2016-03-21 16:14:22 +0100
-categories: amazon swish
 ---
 Ganska dålig rubrik va? I vilket fall så stötte vi på ett tillfälle där vi ville köra kod innan en closure kördes. Vi vill alltså "prependa kod i en closure". Just i det här fallet var det att vi ville köra newrelic_name_transaction för att mappa requests till en viss route innan koden för routen exekverades, och utan att behöva lägga till koden i varje routes kod.
 
