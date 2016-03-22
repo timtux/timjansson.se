@@ -10,9 +10,9 @@
   <meta name="description" content="Min utvecklingsdagbok där jag publicerar lösningar på problem som uppstår i min vardag. Många poster kommer vara slarvigt skrivna men alla gånger jag försökt mig på detta tidigare har det slutat i att jag strävat efter så mycket perfektion att jag inte fått något publicerat.
 ">
 
-  <link rel="stylesheet" href="/timjansson.se/css/main.css">
-  <link rel="canonical" href="http://timtux.github.io//timjansson.se/">
-  <link rel="alternate" type="application/rss+xml" title="Tim Jansson" href="http://timtux.github.io//timjansson.se/feed.xml">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://timjansson.se/">
+  <link rel="alternate" type="application/rss+xml" title="Tim Jansson" href="http://timjansson.se/feed.xml">
 </head>
 
 
@@ -22,7 +22,7 @@
 
   <div class="wrapper">
 
-    <a class="site-title" href="/timjansson.se/">Tim Jansson</a>
+    <a class="site-title" href="/">Tim Jansson</a>
 
     <nav class="site-nav">
       <a href="#" class="menu-icon">
@@ -36,7 +36,7 @@
       <div class="trigger">
         
           
-          <a class="page-link" href="/timjansson.se/about/">About</a>
+          <a class="page-link" href="/about/">About</a>
           
         
           
@@ -65,7 +65,28 @@
         <span class="post-meta">Mar 21, 2016</span>
 
         <h2>
-          <a class="post-link" href="/timjansson.se/2016/03/21/PHP_f%C3%A5_kod_att_k%C3%B6ras_innan_en_closure.html">PHP: Få kod att exekveras innan en closure</a>
+          <a class="post-link" href="/2016/03/21/UniFi-Security-Gateway-Rebootar.html">UniFi® Security Gateway Pro rebootar och är seg</a>
+        </h2>
+
+        <p><p>Har installerat en UniFi® Security Gateway Pro. Tyvärr så verkar det som att när många enheter ansluter mot samma host så flippar den ur. Den rebootar med jämna intervall på några timmar och det tar lång tid att initiera nya anslutningar mot hosten. Den temporära lösningen som fungerade var att slå av hårdvaru TCP/IP offloading. För att göra detta lär man SSHa in på Gatewayen efter varje omstart eller konfigurationsändring.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">configure
+<span class="nb">set </span>system offload ipv4 pppoe disable
+<span class="nb">set </span>system offload ipv4 vlan disable
+<span class="nb">set </span>system offload ipv4 forwarding disable
+<span class="nb">set </span>system offload ipv6 vlan disable
+<span class="nb">set </span>system offload ipv6 forwarding disable
+commit;save;exit</code></pre></figure>
+
+<p>Får se om det kommer något nytt firmware som fixar detta eller om det blir s/UniFi® Security Gateway Pro/EdgerRouter PRO/g istället.</p>
+</p>
+      </li>
+    
+      <li>
+        <span class="post-meta">Mar 21, 2016</span>
+
+        <h2>
+          <a class="post-link" href="/2016/03/21/PHP_f%C3%A5_kod_att_k%C3%B6ras_innan_en_closure.html">PHP: Få kod att exekveras innan en closure</a>
         </h2>
 
         <p><p>Ganska dålig rubrik va? I vilket fall så stötte vi på ett tillfälle där vi ville köra kod innan en closure kördes. Vi vill alltså “prependa kod i en closure”. Just i det här fallet var det att vi ville köra newrelic_name_transaction för att mappa requests till en viss route innan koden för routen exekverades, och utan att behöva lägga till koden i varje routes kod.</p>
@@ -105,10 +126,10 @@
         <span class="post-meta">Mar 21, 2016</span>
 
         <h2>
-          <a class="post-link" href="/timjansson.se/2016/03/21/welcome-to-jekyll.html">Sätta tidszon i Amazon Linux EBS</a>
+          <a class="post-link" href="/2016/03/21/timezone-amazon-linux.html">Sätta tidszon i Amazon Linux EBS</a>
         </h2>
 
-        <p><p>För att timezonen ska sparas även om vi skapar nya environments och vid auto-skalning osv så skapar vi en ny “ebextension”.</p>
+        <p><p>För att timezonen ska sparas även när nya EBS-instanser skapas (ex. vid skalning) skapar vi en ny fil i  “.ebextensions”.</p>
 
 <p><strong>.ebextensions/00-set-timezone.config</strong></p>
 
@@ -123,7 +144,7 @@
         <span class="post-meta">Mar 21, 2016</span>
 
         <h2>
-          <a class="post-link" href="/timjansson.se/2016/03/21/Swish-API-pa-AWS.html">Swish API, klientcertifikat & Amazon Linux (EBS) (NSS)</a>
+          <a class="post-link" href="/2016/03/21/Swish-API-pa-AWS.html">Swish API, klientcertifikat & Amazon Linux (EBS) (NSS)</a>
         </h2>
 
         <p><p>På jobbet håller vi på att migrera till Amazons infrastruktur från de virtualiserade VMWare-instanserna med Debian vi kör idag. På Amazon har vi valt en uppsättning med Amazon Linux (PHP) som körs i “Elastic Beanstalk”. Målet med migreringen är att få bort så mycket manuellt underhåll som möjligt, öka driftsäkerheten och få en miljö som skalar av sig själv.</p>
@@ -255,7 +276,7 @@ Genererar pkcs12-filen från certifikaten vi behöver och lägger till Swish CA-
     
   </ul>
 
-  <p class="rss-subscribe">subscribe <a href="/timjansson.se/feed.xml">via RSS</a></p>
+  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
 </div>
 
       </div>

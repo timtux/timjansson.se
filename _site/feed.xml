@@ -4,11 +4,32 @@
     <title>Tim Jansson</title>
     <description>Min utvecklingsdagbok där jag publicerar lösningar på problem som uppstår i min vardag. Många poster kommer vara slarvigt skrivna men alla gånger jag försökt mig på detta tidigare har det slutat i att jag strävat efter så mycket perfektion att jag inte fått något publicerat.
 </description>
-    <link>http://timtux.github.io//timjansson.se/</link>
-    <atom:link href="http://timtux.github.io//timjansson.se/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 22 Mar 2016 08:26:37 +0100</pubDate>
-    <lastBuildDate>Tue, 22 Mar 2016 08:26:37 +0100</lastBuildDate>
+    <link>http://timjansson.se/</link>
+    <atom:link href="http://timjansson.se/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 22 Mar 2016 09:09:40 +0100</pubDate>
+    <lastBuildDate>Tue, 22 Mar 2016 09:09:40 +0100</lastBuildDate>
     <generator>Jekyll v3.0.3</generator>
+    
+      <item>
+        <title>UniFi® Security Gateway Pro rebootar och är seg</title>
+        <description>&lt;p&gt;Har installerat en UniFi® Security Gateway Pro. Tyvärr så verkar det som att när många enheter ansluter mot samma host så flippar den ur. Den rebootar med jämna intervall på några timmar och det tar lång tid att initiera nya anslutningar mot hosten. Den temporära lösningen som fungerade var att slå av hårdvaru TCP/IP offloading. För att göra detta lär man SSHa in på Gatewayen efter varje omstart eller konfigurationsändring.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;configure
+&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;system offload ipv4 pppoe disable
+&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;system offload ipv4 vlan disable
+&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;system offload ipv4 forwarding disable
+&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;system offload ipv6 vlan disable
+&lt;span class=&quot;nb&quot;&gt;set &lt;/span&gt;system offload ipv6 forwarding disable
+commit;save;exit&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Får se om det kommer något nytt firmware som fixar detta eller om det blir s/UniFi® Security Gateway Pro/EdgerRouter PRO/g istället.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 21 Mar 2016 16:14:22 +0100</pubDate>
+        <link>http://timjansson.se/2016/03/21/UniFi-Security-Gateway-Rebootar.html</link>
+        <guid isPermaLink="true">http://timjansson.se/2016/03/21/UniFi-Security-Gateway-Rebootar.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>PHP: Få kod att exekveras innan en closure</title>
@@ -44,15 +65,15 @@
 
 </description>
         <pubDate>Mon, 21 Mar 2016 16:14:22 +0100</pubDate>
-        <link>http://timtux.github.io//timjansson.se/2016/03/21/PHP_f%C3%A5_kod_att_k%C3%B6ras_innan_en_closure.html</link>
-        <guid isPermaLink="true">http://timtux.github.io//timjansson.se/2016/03/21/PHP_f%C3%A5_kod_att_k%C3%B6ras_innan_en_closure.html</guid>
+        <link>http://timjansson.se/2016/03/21/PHP_f%C3%A5_kod_att_k%C3%B6ras_innan_en_closure.html</link>
+        <guid isPermaLink="true">http://timjansson.se/2016/03/21/PHP_f%C3%A5_kod_att_k%C3%B6ras_innan_en_closure.html</guid>
         
         
       </item>
     
       <item>
         <title>Sätta tidszon i Amazon Linux EBS</title>
-        <description>&lt;p&gt;För att timezonen ska sparas även om vi skapar nya environments och vid auto-skalning osv så skapar vi en ny “ebextension”.&lt;/p&gt;
+        <description>&lt;p&gt;För att timezonen ska sparas även när nya EBS-instanser skapas (ex. vid skalning) skapar vi en ny fil i  “.ebextensions”.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;.ebextensions/00-set-timezone.config&lt;/strong&gt;&lt;/p&gt;
 
@@ -62,8 +83,8 @@
 
 </description>
         <pubDate>Mon, 21 Mar 2016 15:12:42 +0100</pubDate>
-        <link>http://timtux.github.io//timjansson.se/2016/03/21/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">http://timtux.github.io//timjansson.se/2016/03/21/welcome-to-jekyll.html</guid>
+        <link>http://timjansson.se/2016/03/21/timezone-amazon-linux.html</link>
+        <guid isPermaLink="true">http://timjansson.se/2016/03/21/timezone-amazon-linux.html</guid>
         
         
       </item>
@@ -196,8 +217,8 @@ Genererar pkcs12-filen från certifikaten vi behöver och lägger till Swish CA-
 
 </description>
         <pubDate>Mon, 21 Mar 2016 15:12:42 +0100</pubDate>
-        <link>http://timtux.github.io//timjansson.se/2016/03/21/Swish-API-pa-AWS.html</link>
-        <guid isPermaLink="true">http://timtux.github.io//timjansson.se/2016/03/21/Swish-API-pa-AWS.html</guid>
+        <link>http://timjansson.se/2016/03/21/Swish-API-pa-AWS.html</link>
+        <guid isPermaLink="true">http://timjansson.se/2016/03/21/Swish-API-pa-AWS.html</guid>
         
         
       </item>
