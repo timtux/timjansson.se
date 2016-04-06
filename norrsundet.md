@@ -1,7 +1,6 @@
 ---
 layout: page
-title: Om mig
-permalink: /om-mig/
+permalink: /flyktingboende-i-norrsundet/
 ---
 Började som tolvåring att intressera mig för linux och programmering. Intresset har vart ihållande och idag har jag yrkeserfarenhet av desktop, server och webbapplikationsutveckling. Från prototyp till design, implementation, testning och dokumentation i flera språk och miljöer.
 
