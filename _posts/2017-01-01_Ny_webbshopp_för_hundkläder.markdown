@@ -1,8 +1,6 @@
 ---
 layout: post
-title:  "Oktober, vår nya plattform och 44 miljoner pageviews"
-date:   2016-11-14 08:33:00 +0100
+title:  "Ny webbshop med hundkläder och hundprylar"
+date:   2017-01-28 14:41:00 +0100
 ---
-> Our web servers delivered 44 million page views in October - at most 2.5 million in a day. In addition CloudFront delivered around 800 million requests resulting in 17 TB of data. The system managed to handle 800 incoming orders in one hour.
-
-Texten ovan summerar oktober ganska bra. 
+Min fru har startat en webbshop som heter <a href="https://www.tinybuddy.se/">Tinybuddy.se</a> som säljer <a href="https://www.tinybuddy.se/collections/hundklader">hundkläder</a>, <a href="https://www.tinybuddy.se/collections/promenad">hundselar, hundkoppel, hundhalsband</a>, <a href="https://www.tinybuddy.se/collections/hundskor">hundskor</a>, <a href="https://www.tinybuddy.se/collections/hundleksaker">hundleksaker</a> och andra hundtillbehör. In och kika!
